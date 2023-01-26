@@ -74,8 +74,6 @@ String.prototype.multiply = function(num2){
 }
 String.prototype.plus = function(str2){
     
-    //let str2 = "";
-    //str2 = num2;
     let str1 = this;
     if (str1.length > str2.length){
        
@@ -143,11 +141,9 @@ String.prototype.minus = function (str2){
         return false;
     }
      
-     // Function for find difference
-     // of larger numbers
+     // Function for find difference of larger numbers
     
-        // make sure str1
-        // is not smaller
+        // make sure str1 is not smaller
         
         if (isSmaller(str1, str2)) {
             let t = str1;
@@ -175,13 +171,11 @@ String.prototype.minus = function (str2){
             // compute difference of
             // current digits
             let sub
-                = ((str1[i].charCodeAt(0) -
-                '0'.charCodeAt(0))
-                   - (str2[i].charCodeAt(0) -
-                   '0'.charCodeAt(0)) - carry);
+                = ((str1[i].charCodeAt(0) -'0'.charCodeAt(0))
+                   - (str2[i].charCodeAt(0) -'0'.charCodeAt(0)) - carry);
   
             // If subtraction is less than zero
-            // we add then we add 10 into sub and
+            //  we add 10 into sub and
             // take carry as 1 for calculating next step
             if (sub < 0) {
                 sub = sub + 10;
